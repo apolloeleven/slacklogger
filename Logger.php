@@ -52,6 +52,7 @@ class Logger
         if (isset($response['http_code']) && $response['http_code'] === 200) {
             return true;
         }
+        return false;
     }
 
     public function formatMessage($message)
@@ -62,7 +63,7 @@ class Logger
         foreach ($trace as $item) {
             $traceItems[] = $item['file'].'. Line: '.$item['line'];
         }
-        return $message.PHP_EOL.PHP_EOL."Trace".PHP_EOL.implode('\n', $traceItems);
+        return $message.PHP_EOL.PHP_EOL."Trace".PHP_EOL.implode(PHP_EOL, $traceItems);
     }
 
     private function makeRequest($url, $data = [])
