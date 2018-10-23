@@ -1,0 +1,15 @@
+{
+    "name": "apollo11/slacklogger",
+    "description": "Send messages to slack channel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Zura Sekhniashvili",
+            "email": "zura@apollo11.ge"
+        }
+    ],
+    "require": {
+        "ext-curl": "*"
+    }
+}
